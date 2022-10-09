@@ -34,20 +34,22 @@ public class TestJava {
         //Relacionando as regioes de vendas ao setor de vendas
         vendas.adicionarRegiaoVendas(regiaoNordeste);
         vendas.adicionarRegiaoVendas(regiaoSudeste);
-        regiaoNordeste.setSetorVendas(vendas);
-        regiaoSudeste.setSetorVendas(vendas);
+
+        System.out.println(regiaoNordeste.getUnidadeSetorVendas());
 
         //Relacionando os representantes de vendas às regioes de vendas
         regiaoNordeste.setRepresentante(representante1);
         regiaoSudeste.setRepresentante(representante2);
-        representante1.setRegiaoDeVendas(regiaoNordeste);
-        representante2.setRegiaoDeVendas(regiaoSudeste);
+
+        System.out.println(representante1);
 
         //Relacionando as zonas de vendas às regioes de vendas
         regiaoNordeste.adicionarZonaVendas(bahia);
         regiaoNordeste.adicionarZonaVendas(ceara);
         regiaoSudeste.adicionarZonaVendas(saoPaulo);
         regiaoSudeste.adicionarZonaVendas(rioDeJaneiro);
+
+        //System.out.println(ceara.getNomeRegiao());
 
         //Relacionando vendedores às zonas de vendas
         bahia.setVendedor(vendedor1);
@@ -56,7 +58,7 @@ public class TestJava {
         rioDeJaneiro.setVendedor(vendedor4);
 
 
-        System.out.println(vendedor1.getZonaDeVendas());
+      //  System.out.println(vendedor1.getZonaDeVendas());
         //vendedor1.setZonaDeVendas(bahia);
 
 

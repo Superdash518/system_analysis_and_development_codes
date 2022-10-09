@@ -24,8 +24,8 @@ public class EmpresaXyz {
         return cnpj;
     }
 
-    public SetorVendas getVendas() {
-        return vendas;
+    public double getVendas() {
+        return vendas.getFaturamento();
     }
 
     public void setVendas(SetorVendas vendas) {

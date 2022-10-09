@@ -13,6 +13,12 @@ public class RegiaoDeVendas{
 
     private ArrayList<ZonaDeVendas> zonasDeVendas;
 
+    public RegiaoDeVendas(String nomeRegiao, double faturamento, RepresentanteDeVendas representante) {
+        this.nomeRegiao = nomeRegiao;
+        this.faturamento = faturamento;
+        zonasDeVendas = new ArrayList<>();
+        this.representante = representante;
+    }
     public RegiaoDeVendas(String nomeRegiao, double faturamento) {
         this.nomeRegiao = nomeRegiao;
         this.faturamento = faturamento;
@@ -27,12 +33,12 @@ public class RegiaoDeVendas{
         return faturamento;
     }
 
-    public RepresentanteDeVendas getRepresentante() {
-        return representante;
+    public String getRepresentante() {
+        return representante.getNome();
     }
 
-    public SetorVendas getSetorVendas() {
-        return setorVendas;
+    public String getUnidadeSetorVendas() {
+        return setorVendas.getUnidade();
     }
 
     public void setSetorVendas(SetorVendas setorVendas) {
@@ -41,10 +47,12 @@ public class RegiaoDeVendas{
 
     public void setRepresentante(RepresentanteDeVendas representante) {
         this.representante = representante;
+        representante.setRegiaoDeVendas(this);
     }
 
     public void adicionarZonaVendas(ZonaDeVendas zonaDeVendas){
         zonasDeVendas.add(zonaDeVendas);
+        zonaDeVendas.setRegiao(this);
     }
 
     public void removerZonaVendas(ZonaDeVendas zonaDeVendas){

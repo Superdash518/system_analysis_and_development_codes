@@ -6,7 +6,10 @@ public class ZonaDeVendas{
 
     final private int id;
     final private String nomeZona;
+
+    private RegiaoDeVendas regiao;
     private Vendedor vendedor;
+
 
     public ZonaDeVendas(int id, String nomeZona) {
         this.id = id;
@@ -21,13 +24,18 @@ public class ZonaDeVendas{
         return nomeZona;
     }
 
-    public Vendedor getVendedor() {
-        return vendedor;
+    public String getNomeRegiao(){return regiao.getNomeRegiao();}
+    public String getNomeVendedor() {
+        return vendedor.getNome();
     }
 
     public void setVendedor(Vendedor vendedor) {
         this.vendedor = vendedor;
         this.vendedor.setZonaDeVendas(this);
+    }
+
+    public void setRegiao(RegiaoDeVendas regiao){
+        this.regiao = regiao;
     }
 
     @Override

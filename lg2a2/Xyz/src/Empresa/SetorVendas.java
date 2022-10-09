@@ -16,12 +16,17 @@ public class SetorVendas {
         this.faturamento = faturamento;
     }
 
+    public String getUnidade() {
+        return unidade;
+    }
+
     public double getFaturamento() {
         return faturamento;
     }
 
     public void adicionarRegiaoVendas(RegiaoDeVendas regiaoDeVendas){
         regioesDeVendas.add(regiaoDeVendas);
+        regiaoDeVendas.setSetorVendas(this);
     }
 
     public int quantidadeRegiaoVendas(){

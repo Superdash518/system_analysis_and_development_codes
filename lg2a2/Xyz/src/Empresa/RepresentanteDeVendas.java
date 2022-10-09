@@ -14,8 +14,8 @@ public class RepresentanteDeVendas extends Mercador {
 
     }
 
-    public RegiaoDeVendas getRegiaoDeVendas() {
-        return regiaoDeVendas;
+    public String getRegiaoDeVendas() {
+        return regiaoDeVendas.getNomeRegiao();
     }
 
     public void setRegiaoDeVendas(RegiaoDeVendas regiaoDeVendas) {

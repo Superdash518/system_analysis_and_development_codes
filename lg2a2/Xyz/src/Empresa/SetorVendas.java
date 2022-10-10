@@ -10,10 +10,9 @@ public class SetorVendas {
     private ArrayList<RegiaoDeVendas> regioesDeVendas;
 
 
-    public SetorVendas(String unidade,double faturamento) {
+    public SetorVendas(String unidade) {
         this.unidade = unidade;
         regioesDeVendas = new ArrayList<RegiaoDeVendas>();
-        this.faturamento = faturamento;
     }
 
     public String getUnidade() {

@@ -4,8 +4,8 @@ public class RepresentanteDeVendas extends Mercador {
 
 
     private RegiaoDeVendas regiaoDeVendas;
-    public RepresentanteDeVendas(String nome, double valorVendas) {
-        super(nome, valorVendas);
+    public RepresentanteDeVendas(String nome) {
+        super(nome);
         //this.valorVendas = valorVendas;
     }
 

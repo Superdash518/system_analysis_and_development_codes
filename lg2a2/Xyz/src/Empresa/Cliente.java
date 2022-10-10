@@ -18,6 +18,8 @@ public class Cliente {
         this.cpf = cpf;
         this.nome = nome;
         this.uf = uf;
+      //  this.regiaoDeVendas = setRegiaoDeVendas(uf);
+      //  this.zonaDeVendas = setZonaDeVendas();
         pedidos = new ArrayList<>();
     }
 
@@ -44,10 +46,6 @@ public class Cliente {
         return vendedor;
     }
 
-    public void setVendedor(Vendedor vendedor) {
-        this.vendedor = vendedor;
-    }
-
     public String getRegiao(){return "a";}
 
     //public String getZona()
@@ -63,4 +61,17 @@ public class Cliente {
     public String getUf() {
         return uf;
     }
+
+    public void setVendedor(Vendedor vendedor) {
+        this.vendedor = vendedor;
+    }
+
+    private void setRegiaoDeVendas(String uf){
+
+    }
+
+    private void setZonaDeVendas(String uf){
+
+    }
+
 }

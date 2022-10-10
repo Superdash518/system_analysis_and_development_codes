@@ -35,6 +35,6 @@ public class EmpresaXyz {
     @Override
     public String toString() {
         return MessageFormat.format("A empresa {0} possui o cnpj {1} e sua " +
-                "área de vendas teve o faturamento de  {2}", getNome(),getCnpj(),getVendas().getFaturamento());
+                "área de vendas teve o faturamento de  {2}", getNome(),getCnpj(),getVendas());
     }
 }

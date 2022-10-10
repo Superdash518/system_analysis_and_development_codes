@@ -5,9 +5,8 @@ public abstract class Mercador {
     private double valorVendas;
     private double comissao;
 
-    public Mercador(String nome, double valorVendas) {
+    public Mercador(String nome) {
         this.nome = nome;
-        this.valorVendas = valorVendas;
     }
 
     public String getNome() {

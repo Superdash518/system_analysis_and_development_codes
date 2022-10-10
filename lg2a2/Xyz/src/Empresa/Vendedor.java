@@ -12,21 +12,22 @@ public class Vendedor extends Mercador {
     private ZonaDeVendas zonaDeVendas;
     private RegiaoDeVendas regiaoDeVendas;
 
-    public Vendedor(String nome, double valorVendas, ArrayList<Cliente> clientes, ZonaDeVendas zonaDeVendas, RegiaoDeVendas regiaoDeVendas) {
-        super(nome, valorVendas);
+    public Vendedor(String nome, ArrayList<Cliente> clientes, ZonaDeVendas zonaDeVendas, RegiaoDeVendas regiaoDeVendas) {
+        super(nome);
         this.clientes = clientes;
         this.zonaDeVendas = zonaDeVendas;
         this.regiaoDeVendas = regiaoDeVendas;
     }
 
-    public Vendedor(String nome, double valorVendas) {
-        super(nome, valorVendas);
+    public Vendedor(String nome) {
+        super(nome);
         clientes = new ArrayList<Cliente>();
         //this.valorVendas = valorVendas;
     }
 
     public void adicionarCliente(Cliente cliente){
         clientes.add(cliente);
+        cliente.setVendedor(this);
     }
 
     public int quantidadeClientes(){

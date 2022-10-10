@@ -13,17 +13,18 @@ public class RegiaoDeVendas{
 
     private ArrayList<ZonaDeVendas> zonasDeVendas;
 
-    public RegiaoDeVendas(String nomeRegiao, double faturamento, RepresentanteDeVendas representante) {
+
+    public RegiaoDeVendas(String nomeRegiao, RepresentanteDeVendas representante) {
         this.nomeRegiao = nomeRegiao;
-        this.faturamento = faturamento;
         zonasDeVendas = new ArrayList<>();
         this.representante = representante;
     }
-    public RegiaoDeVendas(String nomeRegiao, double faturamento) {
+    public RegiaoDeVendas(String nomeRegiao) {
         this.nomeRegiao = nomeRegiao;
-        this.faturamento = faturamento;
         zonasDeVendas = new ArrayList<>();
     }
+
+
 
     public String getNomeRegiao() {
         return nomeRegiao;

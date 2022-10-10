@@ -4,23 +4,23 @@ public class TestJava {
     public static void main(String[] args) {
 
         EmpresaXyz empresaXyz = new EmpresaXyz();
-        SetorVendas vendas = new SetorVendas("Matriz",1000000);
+        SetorVendas vendas = new SetorVendas("Matriz");
 
-        RegiaoDeVendas regiaoNordeste = new RegiaoDeVendas("Nordeste", 500000);
-        RegiaoDeVendas regiaoSudeste = new RegiaoDeVendas("Sudeste", 100000);
+        RegiaoDeVendas regiaoNordeste = new RegiaoDeVendas("Nordeste");
+        RegiaoDeVendas regiaoSudeste = new RegiaoDeVendas("Sudeste");
 
-        RepresentanteDeVendas representante1 = new RepresentanteDeVendas("Paulo", 10000);
-        RepresentanteDeVendas representante2 = new RepresentanteDeVendas("Carlos", 40000);
+        RepresentanteDeVendas representante1 = new RepresentanteDeVendas("Paulo");
+        RepresentanteDeVendas representante2 = new RepresentanteDeVendas("Carlos");
 
         ZonaDeVendas bahia = new ZonaDeVendas(1, "Bahia");
         ZonaDeVendas ceara = new ZonaDeVendas(2, "Ceará");
         ZonaDeVendas saoPaulo = new ZonaDeVendas(3, "São Paulo");
         ZonaDeVendas rioDeJaneiro = new ZonaDeVendas(4, "Rio de Janeiro");
 
-        Vendedor vendedor1 = new Vendedor("Pablito", 80000);
-        Vendedor vendedor2 = new Vendedor("Carlitos", 90000);
-        Vendedor vendedor3 = new Vendedor("Juanito", 750348);
-        Vendedor vendedor4 = new Vendedor("Dieguito", 2345678);
+        Vendedor vendedor1 = new Vendedor("Pablito");
+        Vendedor vendedor2 = new Vendedor("Carlitos");
+        Vendedor vendedor3 = new Vendedor("Juanito");
+        Vendedor vendedor4 = new Vendedor("Dieguito");
 
         Cliente otavio = new Cliente("866.307.070-52", "Otavio", "SP");
 
@@ -65,10 +65,6 @@ public class TestJava {
         /*
 
         vendedor3.adicionarCliente(otavio);
-        otavio.setVendedor(vendedor3);
-
-        vendedor3.setRegiaoDeVendas(regiaoSudeste);
-        vendedor3.setZonaDeVendas(saoPaulo);
 
         otavio.adicionarPedido(produto1);
 

@@ -4,21 +4,17 @@ import java.util.Objects;
 
 public class ZonaDeVendas{
 
-    final private int id;
     final private String nomeZona;
 
     private RegiaoDeVendas regiao;
     private Vendedor vendedor;
 
 
-    public ZonaDeVendas(int id, String nomeZona) {
-        this.id = id;
+    public ZonaDeVendas(String nomeZona) {;
         this.nomeZona = nomeZona;
     }
 
-    public int getId() {
-        return id;
-    }
+
 
     public String getNomeZona() {
         return nomeZona;
@@ -28,6 +24,7 @@ public class ZonaDeVendas{
     public String getNomeVendedor() {
         return vendedor.getNome();
     }
+
 
     public void setVendedor(Vendedor vendedor) {
         this.vendedor = vendedor;
@@ -43,11 +40,11 @@ public class ZonaDeVendas{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ZonaDeVendas that = (ZonaDeVendas) o;
-        return id == that.id && Objects.equals(nomeZona, that.nomeZona);
+        return Objects.equals(nomeZona, that.nomeZona) && Objects.equals(regiao, that.regiao) && Objects.equals(vendedor, that.vendedor);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, nomeZona);
+        return Objects.hash(nomeZona, regiao, vendedor);
     }
 }

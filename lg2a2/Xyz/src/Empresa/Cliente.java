@@ -18,8 +18,8 @@ public class Cliente {
         this.cpf = cpf;
         this.nome = nome;
         this.uf = uf;
-      //  this.regiaoDeVendas = setRegiaoDeVendas(uf);
-      //  this.zonaDeVendas = setZonaDeVendas();
+        this.zonaDeVendas = setZonaDeVendas(uf);
+        this.regiaoDeVendas = setRegiaoDeVendas(uf);
         pedidos = new ArrayList<>();
     }
 
@@ -66,12 +66,46 @@ public class Cliente {
         this.vendedor = vendedor;
     }
 
-    private void setRegiaoDeVendas(String uf){
+    public RegiaoDeVendas setRegiaoDeVendas(String uf){
+        String nomeRegiao;
+        switch (uf.toUpperCase()){
+            case "BA":
+            case "CE":
+                nomeRegiao = "Nordeste";
+                break;
+            case "SP":
+            case "RJ":
+                nomeRegiao = "Sudeste";
+                break;
+            default:
+                throw new RuntimeException("Insira uma UF cadastrada no sistema!");
+        }
 
+        RegiaoDeVendas regiaoDeVendas = new RegiaoDeVendas(nomeRegiao);
+        return regiaoDeVendas;
     }
 
-    private void setZonaDeVendas(String uf){
+    private ZonaDeVendas setZonaDeVendas(String uf){
+        String regiao;
+        switch (uf.toUpperCase()){
+            case "BA":
+                regiao = "Bahia";
+                break;
+            case "CE":
+                regiao = "Ceará";
+                break;
+            case "SP":
+                regiao = "São Paulo";
+                break;
+            case "RJ":
+                regiao = "Rio de Janeiro";
+                break;
+            default:
+                throw new RuntimeException("Insira uma UF cadastrada no sistema!");
+        }
 
+        ZonaDeVendas zonaDeVendas = new ZonaDeVendas(regiao);
+        return zonaDeVendas;
     }
 
 }

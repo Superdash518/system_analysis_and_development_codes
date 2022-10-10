@@ -12,10 +12,10 @@ public class TestJava {
         RepresentanteDeVendas representante1 = new RepresentanteDeVendas("Paulo");
         RepresentanteDeVendas representante2 = new RepresentanteDeVendas("Carlos");
 
-        ZonaDeVendas bahia = new ZonaDeVendas(1, "Bahia");
-        ZonaDeVendas ceara = new ZonaDeVendas(2, "Ceará");
-        ZonaDeVendas saoPaulo = new ZonaDeVendas(3, "São Paulo");
-        ZonaDeVendas rioDeJaneiro = new ZonaDeVendas(4, "Rio de Janeiro");
+        ZonaDeVendas bahia = new ZonaDeVendas( "Bahia");
+        ZonaDeVendas ceara = new ZonaDeVendas( "Ceará");
+        ZonaDeVendas saoPaulo = new ZonaDeVendas( "São Paulo");
+        ZonaDeVendas rioDeJaneiro = new ZonaDeVendas( "Rio de Janeiro");
 
         Vendedor vendedor1 = new Vendedor("Pablito");
         Vendedor vendedor2 = new Vendedor("Carlitos");

@@ -58,6 +58,10 @@ public class TestJava {
         rioDeJaneiro.setVendedor(vendedor4);
 
 
+        vendedor1.adicionarCliente(otavio);
+
+
+
       //  System.out.println(vendedor1.getZonaDeVendas());
         //vendedor1.setZonaDeVendas(bahia);
 

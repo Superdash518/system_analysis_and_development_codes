@@ -46,9 +46,11 @@ public class Cliente {
         return vendedor;
     }
 
-    public String getRegiao(){return "a";}
+    public String getRegiao(){return regiaoDeVendas.getNomeRegiao();}
 
-    //public String getZona()
+    public String getZona(){
+        return zonaDeVendas.getNomeZona();
+    }
 
     public String getCpf() {
         return cpf;

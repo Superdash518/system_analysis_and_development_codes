@@ -12,6 +12,8 @@ public class Vendedor extends Mercador {
     private ZonaDeVendas zonaDeVendas;
     private RegiaoDeVendas regiaoDeVendas;
 
+    private double comissao;
+
     public Vendedor(String nome, ArrayList<Cliente> clientes, ZonaDeVendas zonaDeVendas, RegiaoDeVendas regiaoDeVendas) {
         super(nome);
         this.clientes = clientes;
@@ -38,6 +40,7 @@ public class Vendedor extends Mercador {
         return clientes.get(posicao);
     }
 
+
     public String getNome() {
         return super.getNome();
     }
@@ -54,8 +57,8 @@ public class Vendedor extends Mercador {
         return zonaDeVendas.getNomeZona();
     }
 
-    public RegiaoDeVendas getRegiaoDeVendas() {
-        return regiaoDeVendas;
+    public String getRegiaoDeVendas() {
+        return regiaoDeVendas.getNomeRegiao();
     }
 
     public void setZonaDeVendas(ZonaDeVendas zonaDeVendas) {

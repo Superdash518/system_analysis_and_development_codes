@@ -49,6 +49,7 @@ public class RegiaoDeVendas{
     public void setRepresentante(RepresentanteDeVendas representante) {
         this.representante = representante;
         representante.setRegiaoDeVendas(this);
+        representante.setZonasDeVendas(this.zonasDeVendas);
     }
 
     public void adicionarZonaVendas(ZonaDeVendas zonaDeVendas){

@@ -29,6 +29,7 @@ public class ZonaDeVendas{
     public void setVendedor(Vendedor vendedor) {
         this.vendedor = vendedor;
         this.vendedor.setZonaDeVendas(this);
+        this.vendedor.setRegiaoDeVendas(this.regiao);
     }
 
     public void setRegiao(RegiaoDeVendas regiao){

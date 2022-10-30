@@ -28,6 +28,7 @@ public class Cliente {
         pedido.adicionarProduto(produto);
         pedidos.add(pedido);
         pedido.setCliente(this);
+
     }
 
     public void cancelarPedido(Pedido pedido){
@@ -42,8 +43,8 @@ public class Cliente {
         return pedidos.get(posicao);
     }
 
-    public Vendedor getVendedor() {
-        return vendedor;
+    public String getVendedor() {
+        return vendedor.getNome();
     }
 
     public String getRegiao(){return regiaoDeVendas.getNomeRegiao();}
@@ -64,7 +65,7 @@ public class Cliente {
         return uf;
     }
 
-    public void setVendedor(Vendedor vendedor) {
+    protected void setVendedor(Vendedor vendedor) {
         this.vendedor = vendedor;
     }
 
@@ -83,8 +84,7 @@ public class Cliente {
                 throw new RuntimeException("Insira uma UF cadastrada no sistema!");
         }
 
-        RegiaoDeVendas regiaoDeVendas = new RegiaoDeVendas(nomeRegiao);
-        return regiaoDeVendas;
+        return new RegiaoDeVendas(nomeRegiao);
     }
 
     private ZonaDeVendas setZonaDeVendas(String uf){
@@ -106,8 +106,7 @@ public class Cliente {
                 throw new RuntimeException("Insira uma UF cadastrada no sistema!");
         }
 
-        ZonaDeVendas zonaDeVendas = new ZonaDeVendas(regiao);
-        return zonaDeVendas;
+        return new ZonaDeVendas(regiao);
     }
 
 }

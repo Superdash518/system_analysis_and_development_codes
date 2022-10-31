@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1656270751 source:c:\cursos\tads\lg1a1\text adventure\text adventure\main.c
+	<stdio.h>
+	<stdlib.h>
+	<Windows.h>
+	<conio.h>
+
+1655884761 source:c:\cursos\tads\lg1a1\text adventure\text adventure\resizeconsole.c
+	<windows.h>
+	<stdio.h>
+
+1656480964 source:c:\cursos\tads\lg1a1\text adventure\text adventure\cenario1.c
+	<stdio.h>
+	<stdlib.h>
+	<Windows.h>
+	<conio.h>
+
+1656270904 source:c:\cursos\tads\lg1a1\text adventure\text adventure\cenario2.c
+	<stdio.h>
+	<stdlib.h>
+	<Windows.h>
+	<conio.h>
+	<time.h>
+
+1655878870 source:c:\cursos\tads\lg1a1\text adventure\text adventure\gameover.c
+	<stdio.h>
+	<stdlib.h>
+	<Windows.h>
+	<conio.h>
+

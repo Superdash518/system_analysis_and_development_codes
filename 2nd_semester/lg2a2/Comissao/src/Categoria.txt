@@ -1,0 +1,3 @@
+idCategoria;nome;comissao
+10;Brinquedo;2.0
+15;Eletronico;3.0

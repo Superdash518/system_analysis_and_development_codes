@@ -1,0 +1,3 @@
+idProduto;nome;preco;categoria
+200;Rei chikita;300;10
+300;Intel I7-8ª Gen";1500;15

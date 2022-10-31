@@ -1,0 +1,5 @@
+idPedido;cpf;matriculaVendedor;dataPedido;valorPedido
+1;123;8000;01/01/2021;
+2;123;8000;02/01/2021;
+4;123;8000;20/01/2022;
+3;234;8000;03/01/2021;

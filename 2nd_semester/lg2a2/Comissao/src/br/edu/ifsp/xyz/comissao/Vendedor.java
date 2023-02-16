@@ -5,6 +5,7 @@ import br.edu.ifsp.xyz.leitor.Leitor;
 import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Vendedor {
 
@@ -15,14 +16,6 @@ public class Vendedor {
     double valorComissao;
     private Cliente[] clientes;
 
-    double getValorComissao(Cliente cliente){
-       Pedido[] pedidos = cliente.getPedidos();
-       double comissao = 0;
-        for (Pedido pedido : pedidos) {
-            comissao += pedido.getComissaoVendedor();
-        }
-        return comissao;
-    }
     public Vendedor(String caminho, int chave, String valorChave) throws Exception{
         Leitor leitor =  new Leitor(caminho, chave, valorChave);
         ArrayList<String> vendedores = leitor.conteudo();
@@ -32,12 +25,9 @@ public class Vendedor {
         this.nome = campos[1];
         this.telefone = campos[2];
 
-
-
         String caminhoCliente = "./src/Cliente.txt";
         int chaveCliente = 4;
         String valorChaveCliente = this.matricula;
-
 
         leitor = new Leitor(caminhoCliente, chaveCliente, valorChaveCliente);
         ArrayList<String> clientes = leitor.conteudo();
@@ -55,12 +45,9 @@ public class Vendedor {
 
             valorComissao += getValorComissao(cliente);
         }
-        }
+    }
 
-       /* String caminhoPedido = "./src/Vendedor.txt";
-        int chaveVendedor = 0;*/
-
-        String getClientes(){
+    String getClientes(){
             String[] nomes = new String[clientes.length];
             int i = 0;
             for (Cliente cliente: clientes) {
@@ -69,6 +56,14 @@ public class Vendedor {
             }
             return Arrays.toString(nomes);
         }
+    double getValorComissao(Cliente cliente){
+        Pedido[] pedidos = cliente.getPedidos();
+        double comissao = 0;
+        for (Pedido pedido : pedidos) {
+            comissao += pedido.getComissaoVendedor();
+        }
+        return comissao;
+    }
 
     public String getMatricula() {
         return matricula;
@@ -90,11 +85,13 @@ public class Vendedor {
     public String toString() {
         return MessageFormat.format("Vendedor Matricula= {0} nome = {1} telefone = {2} comissao = R${3} clientes={4} "
                 , matricula, nome, telefone, valorComissao, Arrays.toString(clientes));
-            /*"Vendedor{" +
-                "matricula='" + matricula + '\'' +
-                ", nome='" + nome + '\'' +
-                ", telefone='" + telefone + '\'' +
-                ", clientes=" + '\n' + for(Cliente cliente: clientes){cliente.getNome()} +
-                '}';*/
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Vendedor vendedor = (Vendedor) o;
+        return Double.compare(vendedor.valorComissao, valorComissao) == 0 && Objects.equals(matricula, vendedor.matricula) && Objects.equals(nome, vendedor.nome) && Objects.equals(telefone, vendedor.telefone) && Arrays.equals(clientes, vendedor.clientes);
     }
 }

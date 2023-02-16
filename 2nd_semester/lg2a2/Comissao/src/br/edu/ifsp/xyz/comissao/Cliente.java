@@ -2,6 +2,7 @@ package br.edu.ifsp.xyz.comissao;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 
 import br.edu.ifsp.xyz.leitor.Leitor;
 import br.edu.ifsp.xyz.util.Data;
@@ -13,18 +14,6 @@ public class Cliente {
 	private Data dataCadastro;
 	private String sexo;
 	private String nomeVendedor;
-
-	public Pedido[] getPedidos() {
-		return pedidos;
-	}
-
-	public String getCpf() {
-		return cpf;
-	}
-
-	public String getNome() {
-		return nome;
-	}
 
 	public Cliente(String caminho, int chave, String valorChave) throws Exception {
 		Leitor leitor = new Leitor(caminho, chave, valorChave);
@@ -56,7 +45,7 @@ public class Cliente {
 		ArrayList<String> vendedores = leitor.conteudo();
 		int indice = 0;
 		for(String vendedor: vendedores){
-			campos = clientes.get(indice).split(";");
+			campos = vendedores.get(indice).split(";");
 			this.nomeVendedor = campos[1];
 		}
 
@@ -89,6 +78,29 @@ public class Cliente {
 
 	}
 
+	public Data getDataCadastro() {
+		return dataCadastro;
+	}
+
+	public String getSexo() {
+		return sexo;
+	}
+
+	public String getNomeVendedor() {
+		return nomeVendedor;
+	}
+
+	public Pedido[] getPedidos() {
+		return pedidos;
+	}
+
+	public String getCpf() {
+		return cpf;
+	}
+
+	public String getNome() {
+		return nome;
+	}
 	@Override
 	public String toString() {
 		return "Cliente{" +
@@ -100,7 +112,16 @@ public class Cliente {
 				", vendedor=" + nomeVendedor +
 				'}';
 	}
-//		return "Cliente [cpf=" + cpf + ", nome=" + nome + ", pedidos=" + Arrays.toString(pedidos) + "]";
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Cliente cliente = (Cliente) o;
+		return Objects.equals(cpf, cliente.cpf) && Objects.equals(nome, cliente.nome) && Arrays.equals(pedidos, cliente.pedidos) && Objects.equals(dataCadastro, cliente.dataCadastro) && Objects.equals(sexo, cliente.sexo) && Objects.equals(nomeVendedor, cliente.nomeVendedor);
+	}
+
+	//		return "Cliente [cpf=" + cpf + ", nome=" + nome + ", pedidos=" + Arrays.toString(pedidos) + "]";
 	//return "Cliente [cpf=" + cpf + ", nome=" + nome + ", pedidos=" + getPedido() + "]";
 
 }

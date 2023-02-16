@@ -1,3 +1,15 @@
 idProduto;nome;preco;categoria
 200;Rei chikita;300;10
+250;Miniatura Shrek;99999;10
 300;Intel I7-8ª Gen";1500;15
+400;Sal Grosso;15;20
+500;COD MW II;380;30
+510;SpiderMan PS4;200;30
+520;The Last of us;250;30
+600;Playstation 1;5000;40
+615;Playstation 2;900;40
+620;Playstation 3;2000;40
+630;Playstation 4;4000;40
+640;Nintendo Switch;3000;40
+650;Xbox Series X;3500;40
+

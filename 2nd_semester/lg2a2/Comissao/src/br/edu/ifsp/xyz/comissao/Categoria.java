@@ -3,6 +3,7 @@ package br.edu.ifsp.xyz.comissao;
 import br.edu.ifsp.xyz.leitor.Leitor;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Categoria {
 
@@ -38,5 +39,13 @@ public class Categoria {
                 ", nome='" + nome + '\'' +
                 ", percentualComissao=" + percentualComissao + "%" +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Categoria categoria = (Categoria) o;
+        return id == categoria.id && Double.compare(categoria.percentualComissao, percentualComissao) == 0 && Objects.equals(nome, categoria.nome);
     }
 }

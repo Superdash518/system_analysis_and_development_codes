@@ -5,7 +5,7 @@ import br.edu.ifsp.xyz.comissao.ItemPedido;
 
 public class ItemPedidoTeste {
     public static void main(String[] args) throws Exception {
-        ItemPedido itemPedido = new ItemPedido("./src/ItemPedido.txt", 1, 1);
+        ItemPedido itemPedido = new ItemPedido("./src/ItemPedido.txt", 1, 1, 200);
         System.out.println("--->" + itemPedido);
     }
 }

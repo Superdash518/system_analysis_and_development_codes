@@ -1,5 +1,7 @@
 package br.edu.ifsp.xyz.util;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Objects;
 
 public class Data {
@@ -55,15 +57,32 @@ public class Data {
 			throw new RuntimeException("Dia invalido");
 		}
 	}
-		
+/*
+
+	public boolean isWithinRange(Data dataInicio, Data dataFim){
+		boolean result = false;
+		Date dataTeste = new Date(this.dia, this.mes, this.ano);
+		Date dateInicio = new Date(dataInicio.dia, dataInicio.mes, dataInicio.ano);
+		Date dateFim = new Date(dataFim.dia, dataFim.mes, dataFim.ano);
+
+		if((dataTeste.equals(dateInicio) || dataTeste.equals(dateFim))
+				|| (dataTeste.after(dateInicio) && dataTeste.before(dateFim))){
+			result = true;
+		}
+
+		return result;
+	}
+*/
+	public boolean between(Data dataInicio, Data dataFim){
+		int dataThis = this.getAno() * 10000  + this.getMes()*100 + this.getDia();
+		int dataI = dataInicio.getAno() * 10000  + dataInicio.getMes()*100 + dataInicio.getDia();
+		int dataF = dataFim.getAno() * 10000  + dataFim.getMes()*100 + dataFim.getDia();
+		return dataThis >= dataI && dataThis <= dataF;
+	}
 	private boolean anoBissexto() {
 		if ((ano % 4 == 0) && (ano % 100 != 0)) {
-			if (ano % 400 == 0) {
-				return false;
-			} 
-			return true;
+			return ano % 400 != 0;
 		}
-		
 		return false;
 	}
 

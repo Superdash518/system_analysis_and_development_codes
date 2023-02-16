@@ -1,3 +1,8 @@
 idCategoria;nome;comissao
 10;Brinquedo;2.0
 15;Eletronico;3.0
+20;Churrasco;15.0
+30;Games;10.0
+40;Consoles;20.0
+
+

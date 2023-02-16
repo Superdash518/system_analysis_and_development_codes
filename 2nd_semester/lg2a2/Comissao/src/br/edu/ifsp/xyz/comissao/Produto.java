@@ -3,6 +3,7 @@ package br.edu.ifsp.xyz.comissao;
 import br.edu.ifsp.xyz.leitor.Leitor;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Produto {
 
@@ -50,5 +51,13 @@ public class Produto {
                 ", nome='" + nome + '\'' +
                 ", preco=" + preco + " categoria= " + categoria.getNome() +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Produto produto = (Produto) o;
+        return id == produto.id && Double.compare(produto.preco, preco) == 0 && Objects.equals(nome, produto.nome) && Objects.equals(categoria, produto.categoria);
     }
 }

@@ -96,6 +96,7 @@ public class Comissao {
             documento.add(table);
             documento.close();
 
+
         } catch (DocumentException | IOException ex) {
             throw new RuntimeException(ex);
         }
@@ -104,26 +105,28 @@ public class Comissao {
 
     @Override
     public String toString() {
-        comissao = 0;
-        System.out.println("-------------------------------- Extrato de Vendas -----------------------------------------");
-        System.out.println("Vendedor: " + vendedor.getNome());
-        System.out.printf("|%-6s|%-10s|%-16s|%-6s|%10s|%11s|%10s|%14s|%n", "Pedido", "Data", "Produto",
-                "Preco", "Quantidade", "Valor Total", "Percentual", "Valor Comissao");
+        comissao = 0; //workaround
+        StringBuilder sb = new StringBuilder();
+        sb.append("-------------------------------- Extrato de Vendas -----------------------------------------\n");
+        sb.append("Vendedor: ").append(vendedor.getNome()).append("\n");
+        sb.append(String.format("|%-6s|%-10s|%-16s|%-6s|%10s|%11s|%10s|%14s|%n", "Pedido", "Data", "Produto", "Preco", "Quantidade", "Valor Total", "Percentual", "Valor Comissao"));
         for (Pedido pedido : pedidos) {
             for (int j = 0; j < pedido.getItensPedidos().length; j++) {
-                System.out.printf("|%-6d|%-10s|%-16s|%-6s|%10s|%11s|%10s|%14s|%n", pedido.getIdPedido(),
-                        pedido.getDataPedido(),
-                        pedido.getItensPedidos()[j].getProduto().getNome(),
-                        pedido.getItensPedidos()[j].getPreco(),
-                        pedido.getItensPedidos()[j].getQuantidade(),
-                        pedido.getItensPedidos()[j].getValorTotalItem(),
-                        pedido.getItensPedidos()[j].getPercentualComissao(),
-                        pedido.getItensPedidos()[j].getComissaoPedido());
-                comissao += pedido.getItensPedidos()[j].getComissaoPedido();
+                        sb.append(String.format("|%-6d",pedido.getIdPedido()));
+                        sb.append(String.format("|%-10s",pedido.getDataPedido()));
+                        sb.append(String.format("|%-16s",pedido.getItensPedidos()[j].getProduto().getNome()));
+                        sb.append(String.format("|%-6s",pedido.getItensPedidos()[j].getPreco()));
+                        sb.append(String.format("|%-10s",pedido.getItensPedidos()[j].getQuantidade()));
+                        sb.append(String.format("|%-11s",pedido.getItensPedidos()[j].getValorTotalItem()));
+                        sb.append(String.format("|%-10s",pedido.getItensPedidos()[j].getPercentualComissao()));
+                        sb.append(String.format("|%-14s|\n",pedido.getItensPedidos()[j].getComissaoPedido()));
+                    comissao += pedido.getItensPedidos()[j].getComissaoPedido();
             }
         }
-        System.out.println("Comissao Total: " + comissao);
-        return "--------------------------------------------------------------------------------------------";
+        sb.append("Comissão Total: ");
+        sb.append(comissao).append("\n");
+        sb.append("--------------------------------------------------------------------------------------------");
+        return sb.toString();
     }
 
     @Override

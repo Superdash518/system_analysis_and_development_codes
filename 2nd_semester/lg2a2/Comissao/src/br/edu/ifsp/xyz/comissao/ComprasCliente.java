@@ -42,20 +42,21 @@ public class ComprasCliente {
 
     @Override
     public String toString() {
-        System.out.println("-------------------------------- Extrato de Vendas -----------------------------------------");
-        System.out.println("Cliente: " + cliente.getNome());
-        System.out.printf("|%-6s|%-10s|%-16s|%-6s|%10s|%11s|%n", "Pedido", "Data", "Produto",
-                "Preco", "Quantidade", "Valor Total");
+        StringBuilder sb = new StringBuilder();
+        sb.append("-------------------------------- Extrato de Vendas -----------------------------------------\n");
+        sb.append("Cliente: ").append(cliente.getNome()).append("\n");
+        sb.append(String.format("|%-6s|%-10s|%-16s|%-6s|%10s|%11s|%n", "Pedido", "Data", "Produto", "Preco", "Quantidade", "Valor Total"));
         for (Pedido pedido : pedidos) {
             for (int j = 0; j < pedido.getItensPedidos().length; j++) {
-                System.out.printf("|%-6d|%-10s|%-16s|%-6s|%10s|%11s|%n", pedido.getIdPedido(),
-                        pedido.getDataPedido(),
-                        pedido.getItensPedidos()[j].getProduto().getNome(),
-                        pedido.getItensPedidos()[j].getPreco(),
-                        pedido.getItensPedidos()[j].getQuantidade(),
-                        pedido.getItensPedidos()[j].getValorTotalItem());
+                sb.append(String.format("|%-6d", pedido.getIdPedido()));
+                sb.append(String.format("|%-10s", pedido.getDataPedido()));
+                sb.append(String.format("|%-16s", pedido.getItensPedidos()[j].getProduto().getNome()));
+                sb.append(String.format("|%-6s",pedido.getItensPedidos()[j].getPreco()));
+                sb.append(String.format("|%10s",pedido.getItensPedidos()[j].getQuantidade()));
+                sb.append(String.format("|%11s\n", pedido.getItensPedidos()[j].getValorTotalItem()));
             }
         }
-        return "--------------------------------------------------------------------------------------------";
+        sb.append("--------------------------------------------------------------------------------------------");
+        return sb.toString();
     }
 }

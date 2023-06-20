@@ -1,0 +1,83 @@
+JFDML JFormDesigner: "8.1.0.0.283" Java: "17.0.5" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JInternalFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {comp jpnFormulario::l:::x}"
+			"$verticalGroup": "par l {comp jpnFormulario::l:::x}"
+		} ) {
+			name: "this"
+			"visible": true
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :p:109:p, par l {par c:l {comp textField1::c:p:269:p, comp textField2::c:p:269:p, comp textField3::c:p:269:p}, comp label2:::p::p, comp label1:::p::p, seq {comp jbtnConfirmar:::p:110:p, space :49:49:p, comp jbtnCancelar:::p:110:p}, comp label3::l:p::p}, space ::172:x}}"
+				"$verticalGroup": "par l {seq l {space :p:15:p, comp label1:::p::p, space :6:6:p, comp textField1:::p::p, space :18:18:p, comp label2:::p::p, space :12:12:p, comp textField2:::p::p, space :p:18:p, comp label3:::p:16:p, space :::p, comp textField3:::p::p, space :p:57:p, par l {comp jbtnConfirmar:::p:35:p, comp jbtnCancelar:::p:35:p}, space ::37:x}}"
+			} ) {
+				name: "jpnFormulario"
+				auxiliary() {
+					"JavaCodeGenerator.variableModifiers": 4
+				}
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "text"
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 4
+					}
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textField1"
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 4
+					}
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textField2"
+					"cursor": new java.awt.Cursor( 2 )
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 4
+					}
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyPressed", "textField2KeyPressed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label2"
+					"text": "text"
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 4
+					}
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "textField3"
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 4
+					}
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label3"
+					"text": "text"
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 4
+					}
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "jbtnConfirmar"
+					"text": "Confirmar"
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 4
+					}
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jbtnConfirmarActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "jbtnCancelar"
+					"text": "Cancelar"
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 4
+					}
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jbtnCancelarActionPerformed", true ) )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 5, 5 )
+			"size": new java.awt.Dimension( 550, 360 )
+		} )
+	}
+}

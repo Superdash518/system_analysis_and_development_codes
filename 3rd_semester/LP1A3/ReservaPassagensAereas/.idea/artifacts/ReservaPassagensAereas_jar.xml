@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="ReservaPassagensAereas:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ReservaPassagensAereas_jar</output-path>
+    <root id="archive" name="ReservaPassagensAereas.jar">
+      <element id="module-output" name="ReservaPassagensAereas" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/dependencies/flatlaf-intellij-themes-3.1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/dependencies/sqlite-jdbc-3.7.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/dependencies/flatlaf-3.1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/dependencies/forms_rt.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/dependencies/mysql-connector-j-8.0.33.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

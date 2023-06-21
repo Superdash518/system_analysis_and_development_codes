@@ -9,6 +9,7 @@ new FormModel {
 		} ) {
 			name: "this"
 			"visible": true
+			"closable": true
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
 				"$horizontalGroup": "par l {seq l {space :p:109:p, par l {par c:l {comp textField1::c:p:269:p, comp textField2::c:p:269:p, comp textField3::c:p:269:p}, comp label2:::p::p, comp label1:::p::p, seq {comp jbtnConfirmar:::p:110:p, space :49:49:p, comp jbtnCancelar:::p:110:p}, comp label3::l:p::p}, space ::172:x}}"
 				"$verticalGroup": "par l {seq l {space :p:15:p, comp label1:::p::p, space :6:6:p, comp textField1:::p::p, space :18:18:p, comp label2:::p::p, space :12:12:p, comp textField2:::p::p, space :p:18:p, comp label3:::p:16:p, space :::p, comp textField3:::p::p, space :p:57:p, par l {comp jbtnConfirmar:::p:35:p, comp jbtnCancelar:::p:35:p}, space ::37:x}}"

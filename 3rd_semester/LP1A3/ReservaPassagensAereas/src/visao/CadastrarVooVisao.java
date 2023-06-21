@@ -43,19 +43,9 @@ public class CadastrarVooVisao extends FormPadrao{
         jpnFormulario.add(jcbModelos);
 
 
-        jbtnConf.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                salvarVisao();
-            }
-        });
+        jbtnConf.addActionListener(e -> salvarVisao());
 
-        jbtnCanc.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                dispose();
-            }
-        });
+        jbtnCanc.addActionListener(e -> dispose());
 
     }
 

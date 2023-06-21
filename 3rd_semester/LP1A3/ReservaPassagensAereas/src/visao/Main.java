@@ -37,24 +37,31 @@ public class Main extends JPanel {
     private void jmiCadastrarAeronaveActionPerformed(ActionEvent e) {
         CadastrarAviaoVisao tela;
         form.abrirFormulario(tela = new CadastrarAviaoVisao(), jDesktop);
+        tela.textField1.requestFocus();
 
     }
 
     private void jmiCadastrarVooActionPerformed(ActionEvent e) {
         CadastrarVooVisao tela;
         form.abrirFormulario(tela = new CadastrarVooVisao(), jDesktop);
-        tela.jpnFormulario.remove(tela.jbtnCancelar);
-        tela.jpnFormulario.remove(tela.jbtnConfirmar);
-        tela.jpnFormulario.repaint();
-        tela.jpnFormulario.revalidate();
+
     }
 
     private void jmiConsultarLugaresVaziosActionPerformed(ActionEvent e) {
         ConsultarLugaresVaziosVisao tela;
         form.abrirFormulario(tela = new ConsultarLugaresVaziosVisao(), jDesktop);
         //tela.jpnFormulario.removeAll();
-        tela.jpnFormulario.repaint();
-        tela.jpnFormulario.revalidate();
+        //tela.jpnFormulario.repaint();
+        //tela.jpnFormulario.revalidate();
+    }
+
+    private void jmiFazerReservaActionPerformed(ActionEvent e) {
+        FazerReservaVisao tela;
+        form.abrirFormulario(tela = new FazerReservaVisao(), jDesktop);
+        tela.jpnFormulario.remove(tela.label3);
+        tela.jpnFormulario.remove(tela.textField3);
+        tela.jpnFormulario.remove(tela.jbtnCancelar);
+        tela.jpnFormulario.remove(tela.jbtnConfirmar);
     }
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
@@ -70,12 +77,13 @@ public class Main extends JPanel {
         jDesktop = new JDesktopPane();
 
         //======== this ========
-        setBorder (new javax. swing. border. CompoundBorder( new javax .swing .border .TitledBorder (new javax. swing. border. EmptyBorder
-        ( 0, 0, 0, 0) , "JF\u006frmD\u0065sig\u006eer \u0045val\u0075ati\u006fn", javax. swing. border. TitledBorder. CENTER, javax. swing. border
-        . TitledBorder. BOTTOM, new java .awt .Font ("Dia\u006cog" ,java .awt .Font .BOLD ,12 ), java. awt
-        . Color. red) , getBorder( )) );  addPropertyChangeListener (new java. beans. PropertyChangeListener( ){ @Override public void
-        propertyChange (java .beans .PropertyChangeEvent e) {if ("\u0062ord\u0065r" .equals (e .getPropertyName () )) throw new RuntimeException( )
-        ; }} );
+        setBorder ( new javax . swing. border .CompoundBorder ( new javax . swing. border .TitledBorder ( new javax
+        . swing. border .EmptyBorder ( 0, 0 ,0 , 0) ,  "JF\u006frmD\u0065sig\u006eer \u0045val\u0075ati\u006fn" , javax. swing
+        .border . TitledBorder. CENTER ,javax . swing. border .TitledBorder . BOTTOM, new java. awt .
+        Font ( "Dia\u006cog", java .awt . Font. BOLD ,12 ) ,java . awt. Color .red
+        ) , getBorder () ) );  addPropertyChangeListener( new java. beans .PropertyChangeListener ( ){ @Override
+        public void propertyChange (java . beans. PropertyChangeEvent e) { if( "\u0062ord\u0065r" .equals ( e. getPropertyName (
+        ) ) )throw new RuntimeException( ) ;} } );
 
         //======== menuBar1 ========
         {
@@ -83,6 +91,7 @@ public class Main extends JPanel {
             //======== menu1 ========
             {
                 menu1.setText("Par\u00e2metros do Sistema");
+                menu1.setIcon(null);
 
                 //---- jmiCadastrarAeronave ----
                 jmiCadastrarAeronave.setText("Cadastrar Aeronave");
@@ -102,6 +111,7 @@ public class Main extends JPanel {
 
                 //---- jmiFazerReserva ----
                 jmiFazerReserva.setText("Fazer Reserva");
+                jmiFazerReserva.addActionListener(e -> jmiFazerReservaActionPerformed(e));
                 menu2.add(jmiFazerReserva);
 
                 //---- jmiConsultarLugaresVazios ----
@@ -121,12 +131,12 @@ public class Main extends JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup()
                 .addComponent(menuBar1, GroupLayout.DEFAULT_SIZE, 665, Short.MAX_VALUE)
-                .addComponent(jDesktop, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 665, Short.MAX_VALUE)
+                .addComponent(jDesktop, GroupLayout.Alignment.TRAILING)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup()
                 .addGroup(layout.createSequentialGroup()
-                    .addComponent(menuBar1, GroupLayout.DEFAULT_SIZE, 53, Short.MAX_VALUE)
+                    .addComponent(menuBar1, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, 0)
                     .addComponent(jDesktop, GroupLayout.DEFAULT_SIZE, 441, Short.MAX_VALUE)
                     .addGap(6, 6, 6))

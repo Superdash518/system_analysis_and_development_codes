@@ -44,15 +44,16 @@ public class Main extends JPanel {
     private void jmiCadastrarVooActionPerformed(ActionEvent e) {
         CadastrarVooVisao tela;
         form.abrirFormulario(tela = new CadastrarVooVisao(), jDesktop);
+        tela.jpnFormulario.remove(tela.jbtnCancelar);
+        tela.jpnFormulario.remove(tela.jbtnConfirmar);
+        tela.jpnFormulario.repaint();
+        tela.jpnFormulario.revalidate();
 
     }
 
     private void jmiConsultarLugaresVaziosActionPerformed(ActionEvent e) {
         ConsultarLugaresVaziosVisao tela;
         form.abrirFormulario(tela = new ConsultarLugaresVaziosVisao(), jDesktop);
-        //tela.jpnFormulario.removeAll();
-        //tela.jpnFormulario.repaint();
-        //tela.jpnFormulario.revalidate();
     }
 
     private void jmiFazerReservaActionPerformed(ActionEvent e) {

@@ -45,19 +45,20 @@ public abstract class FormPadraoConsulta extends JInternalFrame {
 
         //======== jpnFormulario ========
         {
-            jpnFormulario.setBorder ( new javax . swing. border .CompoundBorder ( new javax . swing. border .TitledBorder ( new javax . swing. border .
-            EmptyBorder ( 0, 0 ,0 , 0) ,  "JF\u006frmDes\u0069gner \u0045valua\u0074ion" , javax. swing .border . TitledBorder. CENTER ,javax . swing
-            . border .TitledBorder . BOTTOM, new java. awt .Font ( "D\u0069alog", java .awt . Font. BOLD ,12 ) ,
-            java . awt. Color .red ) ,jpnFormulario. getBorder () ) ); jpnFormulario. addPropertyChangeListener( new java. beans .PropertyChangeListener ( )
-            { @Override public void propertyChange (java . beans. PropertyChangeEvent e) { if( "\u0062order" .equals ( e. getPropertyName () ) )
-            throw new RuntimeException( ) ;} } );
+            jpnFormulario.setBorder(new javax.swing.border.CompoundBorder(new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(
+            0,0,0,0), "JFor\u006dDesi\u0067ner \u0045valu\u0061tion",javax.swing.border.TitledBorder.CENTER,javax.swing.border.TitledBorder
+            .BOTTOM,new java.awt.Font("Dia\u006cog",java.awt.Font.BOLD,12),java.awt.Color.
+            red),jpnFormulario. getBorder()));jpnFormulario. addPropertyChangeListener(new java.beans.PropertyChangeListener(){@Override public void propertyChange(java.
+            beans.PropertyChangeEvent e){if("bord\u0065r".equals(e.getPropertyName()))throw new RuntimeException();}});
 
             //---- label1 ----
             label1.setText("text");
+            label1.setFont(new Font("Segoe UI", Font.PLAIN, 22));
 
             //---- label2 ----
             label2.setText("text");
-            label2.setFont(new Font("Segoe UI", Font.PLAIN, 36));
+            label2.setFont(new Font("Segoe UI", Font.PLAIN, 48));
+            label2.setVisible(false);
 
             GroupLayout jpnFormularioLayout = new GroupLayout(jpnFormulario);
             jpnFormulario.setLayout(jpnFormularioLayout);
@@ -66,21 +67,21 @@ public abstract class FormPadraoConsulta extends JInternalFrame {
                     .addGroup(jpnFormularioLayout.createSequentialGroup()
                         .addGroup(jpnFormularioLayout.createParallelGroup()
                             .addGroup(jpnFormularioLayout.createSequentialGroup()
-                                .addGap(109, 109, 109)
+                                .addGap(79, 79, 79)
                                 .addComponent(label1))
                             .addGroup(jpnFormularioLayout.createSequentialGroup()
-                                .addGap(155, 155, 155)
-                                .addComponent(label2, GroupLayout.PREFERRED_SIZE, 164, GroupLayout.PREFERRED_SIZE)))
+                                .addGap(196, 196, 196)
+                                .addComponent(label2, GroupLayout.PREFERRED_SIZE, 123, GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(231, Short.MAX_VALUE))
             );
             jpnFormularioLayout.setVerticalGroup(
                 jpnFormularioLayout.createParallelGroup()
-                    .addGroup(jpnFormularioLayout.createSequentialGroup()
-                        .addGap(15, 15, 15)
+                    .addGroup(GroupLayout.Alignment.TRAILING, jpnFormularioLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
                         .addComponent(label1)
-                        .addGap(98, 98, 98)
-                        .addComponent(label2, GroupLayout.PREFERRED_SIZE, 107, GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(106, Short.MAX_VALUE))
+                        .addGap(62, 62, 62)
+                        .addComponent(label2, GroupLayout.PREFERRED_SIZE, 101, GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(144, Short.MAX_VALUE))
             );
         }
 

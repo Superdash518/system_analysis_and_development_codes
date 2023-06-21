@@ -11,8 +11,8 @@ new FormModel {
 			"visible": true
 			"closable": true
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-				"$horizontalGroup": "par l {seq {par l {seq {space :p:109:p, comp label1:::p::p}, seq l {space :p:155:p, comp label2:::p:164:p}}, space ::231:x}}"
-				"$verticalGroup": "par l {seq l {space :p:15:p, comp label1:::p::p, space :p:98:p, comp label2:::p:107:p, space ::106:x}}"
+				"$horizontalGroup": "par l {seq {par l {seq {space :p:79:p, comp label1:::p::p}, seq l {space :p:196:p, comp label2:::p:123:p}}, space ::231:x}}"
+				"$verticalGroup": "par l {seq t {space :p:18:p, comp label1:::p::p, space :p:62:p, comp label2:::p:101:p, space ::144:x}}"
 			} ) {
 				name: "jpnFormulario"
 				auxiliary() {
@@ -21,6 +21,7 @@ new FormModel {
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "label1"
 					"text": "text"
+					"font": new java.awt.Font( "Segoe UI", 0, 22 )
 					auxiliary() {
 						"JavaCodeGenerator.variableModifiers": 4
 					}
@@ -28,7 +29,8 @@ new FormModel {
 				add( new FormComponent( "javax.swing.JLabel" ) {
 					name: "label2"
 					"text": "text"
-					"font": new java.awt.Font( "Segoe UI", 0, 36 )
+					"font": new java.awt.Font( "Segoe UI", 0, 48 )
+					"visible": false
 					auxiliary() {
 						"JavaCodeGenerator.variableModifiers": 4
 					}

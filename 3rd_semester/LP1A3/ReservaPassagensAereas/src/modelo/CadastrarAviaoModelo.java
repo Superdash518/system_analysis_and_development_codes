@@ -30,15 +30,6 @@ public class CadastrarAviaoModelo extends AeronaveModelo{
         this.passageiros = passageiros;
     }
 
-    /*
-        public PassageiroModelo getPassageiro(int fileira, int assento) {
-            return this.lugares[fileira][assento];
-        }
-
-        public void setPassageiro(int fileira, int assento, PassageiroModelo passageiro) {
-            this.lugares[fileira][assento] = passageiro;
-        }
-    */
     public boolean verificaLugarOcupado(int fileira, int assento) {
         return this.lugares[fileira][assento] != null;
     }

@@ -30,10 +30,6 @@ public abstract class FormPadrao extends JInternalFrame {
        salvarVisao();
     }
 
-    private void textField2KeyPressed(KeyEvent e) {
-
-    }
-
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         // Generated using JFormDesigner Evaluation license - Pablo Ribeiro
@@ -54,11 +50,7 @@ public abstract class FormPadrao extends JInternalFrame {
 
         //======== jpnFormulario ========
         {
-            jpnFormulario.setBorder ( new javax . swing. border .CompoundBorder ( new javax . swing. border .TitledBorder ( new
-            javax . swing. border .EmptyBorder ( 0, 0 ,0 , 0) ,  "JF\u006frmDesi\u0067ner Ev\u0061luatio\u006e" , javax
-            . swing .border . TitledBorder. CENTER ,javax . swing. border .TitledBorder . BOTTOM, new java
-            . awt .Font ( "Dialo\u0067", java .awt . Font. BOLD ,12 ) ,java . awt
-            . Color .red ) ,jpnFormulario. getBorder () ) ); jpnFormulario. addPropertyChangeListener( new java. beans .
+            jpnFormulario. addPropertyChangeListener( new java. beans .
             PropertyChangeListener ( ){ @Override public void propertyChange (java . beans. PropertyChangeEvent e) { if( "borde\u0072" .
             equals ( e. getPropertyName () ) )throw new RuntimeException( ) ;} } );
 
@@ -70,7 +62,6 @@ public abstract class FormPadrao extends JInternalFrame {
             textField2.addKeyListener(new KeyAdapter() {
                 @Override
                 public void keyPressed(KeyEvent e) {
-                    textField2KeyPressed(e);
                 }
             });
 

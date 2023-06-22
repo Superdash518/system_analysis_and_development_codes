@@ -1,6 +1,6 @@
 package modelo;
 
-public class AeronaveModelo {
+public class AeronaveModelo  {
     private PassageiroModelo[][] passageiros;
     private String modelo;
 

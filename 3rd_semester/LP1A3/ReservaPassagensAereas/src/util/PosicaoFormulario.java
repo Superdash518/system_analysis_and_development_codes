@@ -18,7 +18,6 @@ public class PosicaoFormulario {
     }
 
     public void abrirFormulario(JFrame janela, JDesktopPane desktop) {
-        //janela.setSize(750,400);
         int lDesk = desktop.getWidth();
         int aDesk = desktop.getHeight();
         int lIFrame = janela.getWidth();

@@ -14,6 +14,8 @@ public class FazerReservaVisao extends FormPadrao{
     JButton jbtnCanc;
 
     JLabel jlVoos;
+    JLabel jlFileira;
+    JLabel jlColuna;
 
     PreparedStatement stm = null;
     ResultSet rs = null;

@@ -45,11 +45,12 @@ public abstract class FormPadraoConsulta extends JInternalFrame {
 
         //======== jpnFormulario ========
         {
-            jpnFormulario.setBorder(new javax.swing.border.CompoundBorder(new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(
-            0,0,0,0), "JFor\u006dDesi\u0067ner \u0045valu\u0061tion",javax.swing.border.TitledBorder.CENTER,javax.swing.border.TitledBorder
-            .BOTTOM,new java.awt.Font("Dia\u006cog",java.awt.Font.BOLD,12),java.awt.Color.
-            red),jpnFormulario. getBorder()));jpnFormulario. addPropertyChangeListener(new java.beans.PropertyChangeListener(){@Override public void propertyChange(java.
-            beans.PropertyChangeEvent e){if("bord\u0065r".equals(e.getPropertyName()))throw new RuntimeException();}});
+            jpnFormulario.setBorder(new javax.swing.border.CompoundBorder(new javax.swing.border.TitledBorder(new javax.swing.border
+            .EmptyBorder(0,0,0,0), "JF\u006frmD\u0065sig\u006eer \u0045val\u0075ati\u006fn",javax.swing.border.TitledBorder.CENTER,javax
+            .swing.border.TitledBorder.BOTTOM,new java.awt.Font("Dia\u006cog",java.awt.Font.BOLD,
+            12),java.awt.Color.red),jpnFormulario. getBorder()));jpnFormulario. addPropertyChangeListener(new java.beans
+            .PropertyChangeListener(){@Override public void propertyChange(java.beans.PropertyChangeEvent e){if("\u0062ord\u0065r".equals(e.
+            getPropertyName()))throw new RuntimeException();}});
 
             //---- label1 ----
             label1.setText("text");
@@ -70,18 +71,18 @@ public abstract class FormPadraoConsulta extends JInternalFrame {
                                 .addGap(79, 79, 79)
                                 .addComponent(label1))
                             .addGroup(jpnFormularioLayout.createSequentialGroup()
-                                .addGap(196, 196, 196)
+                                .addGap(211, 211, 211)
                                 .addComponent(label2, GroupLayout.PREFERRED_SIZE, 123, GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(231, Short.MAX_VALUE))
+                        .addContainerGap(216, Short.MAX_VALUE))
             );
             jpnFormularioLayout.setVerticalGroup(
                 jpnFormularioLayout.createParallelGroup()
                     .addGroup(GroupLayout.Alignment.TRAILING, jpnFormularioLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(label1)
-                        .addGap(62, 62, 62)
+                        .addGap(38, 38, 38)
                         .addComponent(label2, GroupLayout.PREFERRED_SIZE, 101, GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(144, Short.MAX_VALUE))
+                        .addContainerGap(155, Short.MAX_VALUE))
             );
         }
 

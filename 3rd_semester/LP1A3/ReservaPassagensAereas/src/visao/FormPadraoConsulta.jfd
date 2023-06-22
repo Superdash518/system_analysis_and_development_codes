@@ -11,8 +11,8 @@ new FormModel {
 			"visible": true
 			"closable": true
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-				"$horizontalGroup": "par l {seq {par l {seq {space :p:79:p, comp label1:::p::p}, seq l {space :p:196:p, comp label2:::p:123:p}}, space ::231:x}}"
-				"$verticalGroup": "par l {seq t {space :p:18:p, comp label1:::p::p, space :p:62:p, comp label2:::p:101:p, space ::144:x}}"
+				"$horizontalGroup": "par l {seq {par l {seq {space :p:79:p, comp label1:::p::p}, seq l {space :p:211:p, comp label2:::p:123:p}}, space ::216:x}}"
+				"$verticalGroup": "par l {seq t {space :p:18:p, comp label1:::p::p, space :p:38:p, comp label2:::p:101:p, space ::155:x}}"
 			} ) {
 				name: "jpnFormulario"
 				auxiliary() {
